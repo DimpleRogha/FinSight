@@ -7,11 +7,24 @@ export const Typography = {
   },
 
   size: {
-    h1: 32,
-    h2: 24,
-    h3: 20,
+    xs: 12,
+    sm: 14,
     body: 16,
-    caption: 14,
-    small: 12,
+    lg: 18,
+    xl: 20,
+    h3: 24,
+    h2: 28,
+    h1: 32,
+  },
+
+  lineHeight: {
+    xs: 16,
+    sm: 20,
+    body: 24,
+    lg: 28,
+    xl: 30,
+    h3: 32,
+    h2: 36,
+    h1: 40,
   },
 };

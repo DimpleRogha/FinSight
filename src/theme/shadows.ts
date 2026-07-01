@@ -3,46 +3,31 @@ import { Platform } from "react-native";
 export const Shadows = {
   sm: Platform.select({
     ios: {
-      shadowColor: "#000",
+      shadowColor: "#7C4DFF",
+      shadowOpacity: 0.12,
+      shadowRadius: 8,
       shadowOffset: {
         width: 0,
-        height: 2,
+        height: 4,
       },
-      shadowOpacity: 0.08,
-      shadowRadius: 4,
     },
     android: {
-      elevation: 2,
+      elevation: 3,
     },
   }),
 
   md: Platform.select({
     ios: {
-      shadowColor: "#000",
-      shadowOffset: {
-        width: 0,
-        height: 4,
-      },
-      shadowOpacity: 0.1,
-      shadowRadius: 8,
-    },
-    android: {
-      elevation: 4,
-    },
-  }),
-
-  lg: Platform.select({
-    ios: {
-      shadowColor: "#000",
+      shadowColor: "#7C4DFF",
+      shadowOpacity: 0.2,
+      shadowRadius: 16,
       shadowOffset: {
         width: 0,
         height: 8,
       },
-      shadowOpacity: 0.12,
-      shadowRadius: 16,
     },
     android: {
-      elevation: 8,
+      elevation: 6,
     },
   }),
 };
