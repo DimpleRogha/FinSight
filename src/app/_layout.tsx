@@ -8,6 +8,8 @@ import { useFonts } from "expo-font";
 import { Stack } from "expo-router";
 import { StatusBar } from "expo-status-bar";
 
+import { FinanceProvider } from "@/context/FinanceContext";
+
 export default function RootLayout() {
   const [fontsLoaded] = useFonts({
     Inter_400Regular,
@@ -21,7 +23,7 @@ export default function RootLayout() {
   }
 
   return (
-    <>
+    <FinanceProvider>
       <StatusBar style="dark" />
 
       <Stack
@@ -29,6 +31,6 @@ export default function RootLayout() {
           headerShown: false,
         }}
       />
-    </>
+    </FinanceProvider>
   );
 }

@@ -9,7 +9,13 @@ import {
 } from "@/utils/finance";
 
 export default function BalanceCard() {
-    const { transactions } = useFinance();
+    const finance = useFinance();
+
+console.log("Finance Context:", finance);
+
+const { transactions } = finance;
+
+console.log("Transactions:", transactions);
     const balance = calculateBalance(transactions);
   return (
     <LinearGradient
