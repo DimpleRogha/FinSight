@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import { StyleSheet, View } from "react-native";
 import { LineChart } from "react-native-chart-kit";
 
+import { useFinance } from "@/hooks/useFinance";
+import { getWeeklyExpenses } from "@/utils/finance";
+
 import AppText from "@/components/common/AppText";
 import Card from "@/components/common/Card";
 import { Theme } from "@/theme";
@@ -17,6 +20,9 @@ const lineData = {
 
 export default function SpendingChart() {
   const [chartWidth, setChartWidth] = useState(0);
+
+  const { transactions } = useFinance();
+  const lineData = getWeeklyExpenses(transactions);
 
   return (
     <Card style={styles.card}>

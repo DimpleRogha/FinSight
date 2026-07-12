@@ -31,3 +31,29 @@ export function recentTransactions(
 ) {
   return transactions.slice(0, count);
 }
+
+export function getWeeklyExpenses(
+  transactions: Transaction[]
+) {
+  const days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+  const weekly = new Array(7).fill(0);
+
+  transactions.forEach((transaction) => {
+    if (transaction.type === "expense") {
+      const day = transaction.date.getDay();
+
+      weekly[day] += transaction.amount;
+    }
+  });
+
+  return {
+    labels: days,
+
+    datasets: [
+      {
+        data: weekly,
+      },
+    ],
+  };
+}

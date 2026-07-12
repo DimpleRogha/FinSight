@@ -9,7 +9,7 @@ export interface Transaction {
 
   type: "income" | "expense";
 
-  date: string;
+  date: Date;
 
   icon: string;
 }

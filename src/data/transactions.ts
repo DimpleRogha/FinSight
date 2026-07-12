@@ -7,7 +7,7 @@ export const transactions: Transaction[] = [
     amount: 65000,
     category: "Income",
     type: "income",
-    date: "Today",
+    date: new Date(2026, 6, 7),
     icon: "wallet-outline",
   },
 
@@ -17,7 +17,7 @@ export const transactions: Transaction[] = [
     amount: 450,
     category: "Food",
     type: "expense",
-    date: "Today",
+    date: new Date(2026, 6, 7),
     icon: "cafe-outline",
   },
 
@@ -27,7 +27,7 @@ export const transactions: Transaction[] = [
     amount: 680,
     category: "Travel",
     type: "expense",
-    date: "Yesterday",
+    date: new Date(2026, 6, 6),
     icon: "car-outline",
   },
 
@@ -37,7 +37,7 @@ export const transactions: Transaction[] = [
     amount: 3100,
     category: "Bills",
     type: "expense",
-    date: "Yesterday",
+    date: new Date(2026, 6, 5),
     icon: "flash-outline",
   },
 
@@ -47,7 +47,7 @@ export const transactions: Transaction[] = [
     amount: 15000,
     category: "Income",
     type: "income",
-    date: "2 days ago",
+    date: new Date(2026, 6, 4),
     icon: "briefcase-outline",
   },
 ];
