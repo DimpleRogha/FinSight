@@ -1,9 +1,5 @@
-import { Text, View } from "react-native";
+import BudgetScreen from "@/screens/Budget/BudgetScreen";
 
 export default function Budget() {
-  return (
-    <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-      <Text>Budget</Text>
-    </View>
-  );
+  return <BudgetScreen />;
 }

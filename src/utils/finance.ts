@@ -57,3 +57,20 @@ export function getWeeklyExpenses(
     ],
   };
 }
+
+export function getCategoryExpense(
+  transactions: Transaction[],
+  category: string
+) {
+  return transactions
+    .filter(
+      (transaction) =>
+        transaction.type === "expense" &&
+        transaction.category === category
+    )
+    .reduce(
+      (total, transaction) =>
+        total + transaction.amount,
+      0
+    );
+}
