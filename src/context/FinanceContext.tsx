@@ -7,6 +7,8 @@ interface FinanceContextType {
   transactions: Transaction[];
 
   addTransaction: (transaction: Transaction) => void;
+
+  deleteTransaction: (id: number) => void;
 }
 
 export const FinanceContext = createContext<FinanceContextType>(
@@ -29,11 +31,18 @@ export function FinanceProvider({
     ]);
   }
 
+  function deleteTransaction(id: number) {
+    setTransactions((previous) =>
+      previous.filter((transaction) => transaction.id !== id)
+    );
+  }
+
   return (
     <FinanceContext.Provider
       value={{
         transactions,
         addTransaction,
+        deleteTransaction,
       }}
     >
       {children}

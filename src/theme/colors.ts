@@ -26,6 +26,9 @@ export const Colors = {
   income: "#52F28C",
   expense: "#FF6B9E",
 
+  incomeBg: "#EAFBF1",
+  expenseBg: "#FDECEC",
+
   warning: "#FFC857",
   success: "#52F28C",
   danger: "#FF6B9E",
