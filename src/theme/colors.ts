@@ -19,6 +19,7 @@ export const Colors = {
   text: "#FFFFFF",
   textSecondary: "#B6AED9",
   textMuted: "#7E79A8",
+  textInverse: "#FFFFFF",
 
   /* Status */
 

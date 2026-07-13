@@ -26,11 +26,20 @@ export default function RootLayout() {
     <FinanceProvider>
       <StatusBar style="dark" />
 
-      <Stack
-        screenOptions={{
-          headerShown: false,
-        }}
-      />
+      <Stack>
+  <Stack.Screen
+    name="(tabs)"
+    options={{ headerShown: false }}
+  />
+
+  <Stack.Screen
+    name="add-transaction"
+    options={{
+      presentation: "modal",
+      headerShown: false,
+    }}
+  />
+</Stack>
     </FinanceProvider>
   );
 }

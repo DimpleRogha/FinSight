@@ -17,7 +17,7 @@ export default function Header() {
               weight="bold"
               style={styles.name}
             >
-              Dimple!
+              User!
             </AppText>
           </AppText>
         </View>
