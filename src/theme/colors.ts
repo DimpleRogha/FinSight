@@ -14,6 +14,9 @@ export const Colors = {
   surfaceLight: "#21194A",
   card: "#241C55",
 
+  /* Accent Backgrounds */
+  purpleBg: "#F3F0FF",
+
   /* Text */
 
   text: "#FFFFFF",

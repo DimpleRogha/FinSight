@@ -2,10 +2,13 @@ import { Ionicons } from "@expo/vector-icons";
 import { Pressable, StyleSheet, View } from "react-native";
 
 import AppText from "@/components/common/AppText";
+import { useUser } from "@/hooks/useUser";
 import { Theme } from "@/theme";
 import { LinearGradient } from "expo-linear-gradient";
 
 export default function Header() {
+  const { name } = useUser();
+
   return (
     <View style={styles.container}>
       <View style={styles.topRow}>
@@ -17,7 +20,7 @@ export default function Header() {
               weight="bold"
               style={styles.name}
             >
-              User!
+              {name}!
             </AppText>
           </AppText>
         </View>

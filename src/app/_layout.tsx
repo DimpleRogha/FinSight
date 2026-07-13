@@ -1,3 +1,4 @@
+import { UserProvider } from "@/context/UserContext";
 import {
   Inter_400Regular,
   Inter_500Medium,
@@ -23,23 +24,25 @@ export default function RootLayout() {
   }
 
   return (
-    <FinanceProvider>
-      <StatusBar style="dark" />
+    <UserProvider>
+      <FinanceProvider>
+        <StatusBar style="dark" />
 
-      <Stack>
-  <Stack.Screen
-    name="(tabs)"
-    options={{ headerShown: false }}
-  />
+        <Stack>
+          <Stack.Screen
+            name="(tabs)"
+            options={{ headerShown: false }}
+          />
 
-  <Stack.Screen
-    name="add-transaction"
-    options={{
-      presentation: "modal",
-      headerShown: false,
-    }}
-  />
-</Stack>
-    </FinanceProvider>
+          <Stack.Screen
+            name="add-transaction"
+            options={{
+              presentation: "modal",
+              headerShown: false,
+            }}
+          />
+        </Stack>
+      </FinanceProvider>
+    </UserProvider>
   );
 }
